@@ -1,0 +1,9 @@
+plugins {
+    id 'eclipse-wtp'
+    id 'java'
+     id 'war'
+}
+
+compileJava {
+    options.encoding = "UTF-8"
+}
