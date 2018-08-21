@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>메인</title>
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<style>
+
+#hh{
+ margin-bottom: 50px;
+ margin-top: 40px;
+
+}
+
+
+.btn-pink {
+  background-color: hsl(0, 100%, 79%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fe118118", endColorstr="#ff9393");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fe118118), to(#ff9393));
+  background-image: -moz-linear-gradient(top, #fe118118, #ff9393);
+  background-image: -ms-linear-gradient(top, #fe118118, #ff9393);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fe118118), color-stop(100%, #ff9393));
+  background-image: -webkit-linear-gradient(top, #fe118118, #ff9393);
+  background-image: -o-linear-gradient(top, #fe118118, #ff9393);
+  background-image: linear-gradient(#fe118118, #ff9393);
+  border-color: #ff9393 #ff9393 hsl(0, 100%, 72.5%);
+  color: rgb(252, 250, 250) !important;  
+  -webkit-font-smoothing: antialiased;
+}
+
+
+div{
+box-sizing: border-box;
+
+}
+
+#total{
+   
+   width:1200px;
+   height:800px;
+   overflow: hidden;
+   margin: auto;   
+   background-image: url('img/home.jpg');
+   background-size: 100%;
+   margin-top:50px;
+
+ }
+ 
+
+#one{
+   
+    width:280px;
+    height:300px;
+    float:left;
+    margin-top: 260px;
+    margin-left: 300px;
+ 
+    
+
+}
+#two{
+    width:350px;
+    min-height:300px;
+    float:right;
+    margin-top: 260px;
+    margin-right: 200px;
+    padding-top: 50px;
+}
+
+
+</style>
+</head>
+<body>
+<div id =total>
+<form>
+
+
+<div id = "one">
+<div id ="hh"><h1>step by step</h1></div>
+ <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default" >@</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Sizing example input" >
+</div>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">@</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Sizing example input" >
+</div>
+ </div>
+ <div id="two">
+ <button type="button" class="btn btn-pink btn-lg btn-block font-weight-bold ">login</button><br>
+ <button type="button" class="btn btn-pink btn-lg btn-block font-weight-bold ">카카오로그인</button><br>
+ <button type="button" class="btn btn-pink btn-lg btn-block font-weight-bold ">회원가입</button><br>
+ 
+ </div>
+ 
+
+</form>
+ </div>
+<footer></footer>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
