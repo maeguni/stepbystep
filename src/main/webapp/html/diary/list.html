@@ -26,6 +26,12 @@
    border-radius: 20px;
 
  }
+ #bt{
+    float: right;
+    margin-right: 150px;
+
+ }
+
 
 </style>
 </head>
@@ -35,63 +41,68 @@
             <table class="table table-hover">
                     <thead>
                       <tr>
-                        <th scope="col">N O</th>
-                        <th scope="col">요일</th>
-                        <th scope="col">제 목</th>
-                        <th scope="col">내 용</th>
+                        <th scope="col" style="width:80px;"> N O</th>
+                        <th scope="col" style="width:150px;">요일</th>
+                        <th scope="col" style="width:150px;">제 목</th>
+                        <th scope="col" style="width:200px;">내 용</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row">1</th>
+                        <th scope="row"><input type="checkbox">1</th>
                         <td>Mark</td>
                         <td>Otto</td>
                         <td>@mdo</td>
                       </tr>
                       <tr>
-                        <th scope="row">2</th>
+                        <th scope="row"><input type="checkbox">2</th>
                         <td>Jacob</td>
                         <td>Thornton</td>
                         <td>@fat</td>
                       </tr>
                       <tr>
-                        <th scope="row">3</th>
+                        <th scope="row"><input type="checkbox">3</th>
                         <td>@twitter</td>
                         <td>@twitter</td>
                         <td>@twitter</td>                        
                       </tr>
                       <tr>
-                            <th scope="row">4</th>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>                        
-                          </tr>
+                       <th scope="row"><input type="checkbox">4</th>
+                        <td>@twitter</td>
+                        <td>@twitter</td>
+                        <td>@twitter</td>                        
+                       </tr>
                           <tr>
-                                <th scope="row">5</th>
+                                <th scope="row"><input type="checkbox">5</th>
                                 <td>@twitter</td>
                                 <td>@twitter</td>
                                 <td>@twitter</td>                        
-                              </tr>
+                            </tr>
                               <tr>
-                                    <th scope="row">6</th>
+                                    <th scope="row"><input type="checkbox">6</th>
                                     <td>@twitter</td>
                                     <td>@twitter</td>
                                     <td>@twitter</td>                        
                                   </tr>
                                   <tr>
-                                        <th scope="row">7</th>
+                                        <th scope="row"> <input type="checkbox">7</th>
                                         <td>@twitter</td>
                                         <td>@twitter</td>
                                         <td>@twitter</td>                        
                                       </tr>
-
-                    </tbody>
+                    </tbody>     
+                                           
                   </table>
-                  <footer></footer>
-    </div>
+                  <div id="bt">   
+                  <button type="button" class="btn btn-secondary">등록</button>
+                  <button type="button" class="btn btn-secondary">수정</button>
+                  <button type="button" class="btn btn-secondary">삭제</button>     
+                </div>    
+                </div>
             <script src="../node_modules/jquery/dist/jquery.min.js"></script>
         <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      
 
 </body>
 </html>

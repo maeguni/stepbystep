@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>메인</title>
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="node_modules/blueimp-file-upload/css/jquery.fileupload.css">
 <style>
 
 
@@ -13,14 +14,14 @@ box-sizing: border-box;
 
 }
 
-#total{
+#content{
    
    width:1200px;
    height:800px;
    overflow: hidden;
    margin: auto;     
    background-size: 100%;
-   background-image: url('img/home.jpg');
+   background-image:url('img/home.jpg');
    margin-top:25px;
    margin-bottom: 25px;
 
@@ -42,6 +43,14 @@ box-sizing: border-box;
   margin: auto;
   border-radius: 20px;
   margin-top: 20px; 
+  overflow: hidden;
+
+}
+#infil{
+  display: block;
+  float:right;
+  margin-right: 20px;
+  margin-bottom: 10px;
 
 }
 
@@ -59,12 +68,8 @@ box-sizing: border-box;
   border-color: #bfbfbf #bfbfbf hsl(0, 0%, 75%);
   color: rgb(252, 252, 252) !important;
   -webkit-font-smoothing: antialiased;
-  text:Stong;
+
 }
-
-
-
-
 
 
 </style>
@@ -75,8 +80,12 @@ box-sizing: border-box;
   <div class="card" >
     <form action="" method="POST" enctype="multipart/form-data">     
         <div id="imgbox"> 
-          <img src=""onError="this.src='img/infoimg.png'"  id="img">  
-       
+          <img src=""onError="this.src='img/infoimg.png'"id="img" >
+          <span id ="infil"class="btn btn-secondary fileinput-button">
+              <i class="glyphicon glyphicon-plus"></i>
+              <span>사 진</span>
+              <input id="fileupload" type="file" name="files" multiple>
+          </span>         
        </div>    
         <div class="card-body">
             <div class="input-group mb-3">
@@ -109,5 +118,8 @@ box-sizing: border-box;
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+<script src="node_modules/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+<script src="node_modules/blueimp-file-upload/js/jquery.fileupload.js"></script>
 </body>
 </html>
