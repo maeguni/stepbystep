@@ -19,11 +19,12 @@
 
  }
 
- .table{
+ #tb{
    width: 900px;
    margin: auto;
    margin-top: 200px;
-   border-radius: 20px;
+   border-radius: 50px;
+   float: none;
 
  }
  #bt{
@@ -38,9 +39,9 @@
 <body>
     <head></head>
     <div id="content">
-            <table class="table table-hover">
+            <table id=tb class="table table-hover ">
                     <thead>
-                      <tr>
+                      <tr class="table-dark">
                         <th scope="col" style="width:80px;"> N O</th>
                         <th scope="col" style="width:150px;">요일</th>
                         <th scope="col" style="width:150px;">제 목</th>
@@ -48,43 +49,49 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <tr class="table-danger" >
                         <th scope="row"><input type="checkbox">1</th>
                         <td>Mark</td>
                         <td>Otto</td>
                         <td>@mdo</td>
                       </tr>
-                      <tr>
+                      <tr class="table-danger">
                         <th scope="row"><input type="checkbox">2</th>
                         <td>Jacob</td>
                         <td>Thornton</td>
                         <td>@fat</td>
                       </tr>
-                      <tr>
+                      <tr class="table-danger">
                         <th scope="row"><input type="checkbox">3</th>
                         <td>@twitter</td>
                         <td>@twitter</td>
                         <td>@twitter</td>                        
                       </tr>
-                      <tr>
+                      <tr class="table-danger">
                        <th scope="row"><input type="checkbox">4</th>
                         <td>@twitter</td>
                         <td>@twitter</td>
                         <td>@twitter</td>                        
                        </tr>
-                          <tr>
+                       <tr class="table-danger">
                                 <th scope="row"><input type="checkbox">5</th>
                                 <td>@twitter</td>
                                 <td>@twitter</td>
                                 <td>@twitter</td>                        
                             </tr>
-                              <tr>
+                              <tr class="table-danger">
                                     <th scope="row"><input type="checkbox">6</th>
                                     <td>@twitter</td>
                                     <td>@twitter</td>
                                     <td>@twitter</td>                        
                                   </tr>
-                                  <tr>
+                                  <tr class="table-danger">
+                                        <th scope="row"> <input type="checkbox">7</th>
+                                        <td>@twitter</td>
+                                        <td>@twitter</td>
+                                        <td>@twitter</td>                        
+                                      </tr>
+                                      <tr class="table-danger">
                                         <th scope="row"> <input type="checkbox">7</th>
                                         <td>@twitter</td>
                                         <td>@twitter</td>
@@ -99,10 +106,9 @@
                   <button type="button" class="btn btn-secondary">삭제</button>     
                 </div>    
                 </div>
-            <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
         <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-      
-
-</body>
+        
+        </body>
 </html>
