@@ -17,36 +17,73 @@
    margin-bottom: 25px;
 
  }
- div {
-    border: 1px solid red;
-   
+
+ form{
+  width: 445px;
+   margin: auto;
+   margin-top: 200px;   
+  
  }
+
+ #title{
+   margin: auto;
+
+
+ }
+
+  #bt{
+    float: right;
+    margin-right: 150px;
+ }
+
+
+
 
 </style>
 
 </head>
 <body>
-     <div id="content">
-     <form method="POST">
-     <div >  
-     <input type="text">
-    </div>
-    <div>  
-     <input type="text">
-    </div>
-    <div> 
+     <div id="content">     
+       
+      <form>
+                  
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">제 목</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>  
      
-     <textarea rows="15" cols="50"></textarea>
-    </div>
 
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">내 용</span>
+            </div>
+            <textarea class="form-control" id="txt1" rows="15" cols="60" style="resize: none;"></textarea>           
+          </div>
+          <span id="textCnt">0</span>/1000<br>
 
-
-     </form>
-    </div>
+      </form>
+      <div id="bt">   
+          <button type="button" class="btn btn-secondary">등록</button>
+          <button type="button" class="btn btn-secondary">취소</button>
+          <button type="button" class="btn btn-secondary">목록</button>     
+        </div>
+        
+      </div>
+    
 
 
         <script src="../node_modules/jquery/dist/jquery.min.js"></script>
         <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        
+        <script> 
+        txt1.oninput = function(event) {
+            console.log("oninput");
+            textCnt.innerHTML = txt1.value.length;
+        };
+        </script>
+        
 </body>
 </html>

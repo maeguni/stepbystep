@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>메인</title>
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
 <style>
 
 #hh{
@@ -50,15 +51,13 @@ box-sizing: border-box;
  
 
 #one{
-   
-    width:280px;
-    height:300px;
-    float:left;
-    margin-top: 260px;
-    margin-left: 300px;
- 
-    
+   margin: auto;
+   margin-top:40px;
+   margin-bottom: 30px; 
+   width:460px;
+    height:100px;  
 
+  
 }
 #two{
     width:350px;
@@ -69,31 +68,44 @@ box-sizing: border-box;
     padding-top: 50px;
 }
 
-
 </style>
 </head>
 <body>
 <div id =content>
 <form>
-
-
-<div id = "one">
-<div id ="hh"><h1>step by step</h1></div>
- <div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-default" >@</span>
-  </div>
-  <input type="text" class="form-control" aria-label="Sizing example input" >
-</div>
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-default">@</span>
-  </div>
-  <input type="text" class="form-control" aria-label="Sizing example input" >
-</div>
- </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">로그인</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div> 
+          <div id ="one">
+                                 
+                 <div class="input-group input-group-lg mb-3">
+                  <div class="input-group-prepend ">
+                    <span class="input-group-text fas fa-user-circle"></span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Sizing example input" >
+                </div>
+                <div class="input-group input-group-lg mb-3 ">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text fas fa-key"></span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Sizing example input" >
+                </div> 
+              </div>  
+                           
+            <div class="modal-footer">             
+              <button type="button" class="btn btn-lg btn-gray btn-block font-weight-bold">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
  <div id="two">
- <button type="button" class="btn btn-pink btn-lg btn-block font-weight-bold ">login</button><br>
+ <button type="button" class="btn btn-pink btn-lg btn-block font-weight-bold " data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">login</button><br>
  <button type="button" class="btn btn-pink btn-lg btn-block font-weight-bold ">카카오로그인</button><br>
  <button type="button" class="btn btn-pink btn-lg btn-block font-weight-bold ">회원가입</button><br>
  
