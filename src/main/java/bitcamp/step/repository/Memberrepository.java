@@ -1,5 +1,11 @@
 package bitcamp.step.repository;
 
-public interface Memberrepository {
+import java.util.Map;
 
+import bitcamp.step.domain.Member;
+
+public interface MemberRepository {
+
+    int insert(Member member);
+    Member findByIdAndPassword(Map<String,Object>params);
 }

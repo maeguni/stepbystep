@@ -17,7 +17,9 @@
         http://www.springframework.org/schema/aop/spring-aop.xsd">
         
 
-  <context:component-scan base-package="bitcamp.step">   
+  <context:component-scan base-package="bitcamp.step">
+    <context:exclude-filter type="regex" 
+                            expression="bitcamp.step.web.*"/>
   </context:component-scan>
 
   <tx:annotation-driven transaction-manager="txManager"/>

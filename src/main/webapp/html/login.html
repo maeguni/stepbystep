@@ -82,24 +82,23 @@ box-sizing: border-box;
                 <span aria-hidden="true">&times;</span>
               </button>
             </div> 
-          <div id ="one">
-                                 
+          <div id ="one">                                 
                  <div class="input-group input-group-lg mb-3">
                   <div class="input-group-prepend ">
                     <span class="input-group-text fas fa-user-circle"></span>
                   </div>
-                  <input type="text" class="form-control" aria-label="Sizing example input" >
+                  <input id ="sId"type="text" class="form-control" aria-label="Sizing example input" >
                 </div>
                 <div class="input-group input-group-lg mb-3 ">
                   <div class="input-group-prepend">
                     <span class="input-group-text fas fa-key"></span>
                   </div>
-                  <input type="text" class="form-control" aria-label="Sizing example input" >
+                  <input id ="sPassword"type="password" class="form-control" aria-label="Sizing example input" >
                 </div> 
               </div>  
                            
             <div class="modal-footer">             
-              <button type="button" class="btn btn-lg btn-gray btn-block font-weight-bold">Submit</button>
+              <button id="loginBtn"type="button" class="btn btn-lg btn-gray btn-block font-weight-bold">Submit</button>
             </div>
           </div>
         </div>
@@ -107,16 +106,41 @@ box-sizing: border-box;
  <div id="two">
  <button type="button" class="btn btn-pink btn-lg btn-block font-weight-bold " data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">login</button><br>
  <button type="button" class="btn btn-pink btn-lg btn-block font-weight-bold ">카카오로그인</button><br>
- <button type="button" class="btn btn-pink btn-lg btn-block font-weight-bold ">회원가입</button><br>
- 
+ <button id ="infoBtn"type="button" class="btn btn-pink btn-lg btn-block font-weight-bold ">회원가입</button><br>
  </div>
- 
-
 </form>
  </div>
 <footer></footer>
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>\
+<script src="js/common.js"></script>
+<script>
+ $('#loginBtn').click(()=>{
+     $.post(`${serverApiAddr}/json/user/login`,{
+    'id':$('#sId').val(),
+    'password':$('#sPassword').val()
+ }, (result)=> {
+          if(result.status === 'success'){
+              alert('로그인 성공!')
+              location.href = 'diary/list.html'
+          } else{
+              alert('로그인 실패!')
+              console.log(result.message)
+          }
+          },'json')
+          .fail(()=>{
+             alert('서버 요청 실패!')
+          });
+ });
+  $('#infoBtn').click(()=>{     
+      location.href = 'info.html'    
+  
+  });
+  
+  
+  
+
+</script>
 </body>
 </html>
