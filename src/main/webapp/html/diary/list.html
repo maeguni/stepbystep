@@ -3,112 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <title>다이어리목록</title>
-<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
 <style>
+#content {
+	width: 1200px;
+	height: 800px;
+	overflow: hidden;
+	margin: auto;
+	background-image: url('../img/back.jpg');
+	background-size: 100%;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
 
-#content{
-   
-   width:1200px;
-   height:800px;
-   overflow: hidden;
-   margin: auto;   
-   background-image: url('../img/back.jpg');
-   background-size: 100%;
-   margin-top:25px;
-   margin-bottom: 25px;
+#tb {
+	width: 900px;
+	margin: auto;
+	margin-top: 200px;
+	border-radius: 50px;
+}
 
- }
-
- #tb{
-   width: 900px;
-   margin: auto;
-   margin-top: 200px;
-   border-radius: 50px;
-
-
- }
- #bt{
-    float: right;
-    margin-right: 150px;
-
- }
-
-
+#bt {
+	float: right;
+	margin-right: 150px;
+}
 </style>
 </head>
 <body>
-    <head></head>
-    <div id="content">
-            <table id=tb class="table table-hover ">
-                    <thead>
-                      <tr class="table-dark">
-                        <th scope="col" style="width:80px;"> N O</th>
-                        <th scope="col" style="width:150px;">요일</th>
-                        <th scope="col" style="width:150px;">제 목</th>
-                        <th scope="col" style="width:200px;">내 용</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="table-danger" >
-                        <th scope="row"><input type="checkbox">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr class="table-danger">
-                        <th scope="row"><input type="checkbox">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr class="table-danger">
-                        <th scope="row"><input type="checkbox">3</th>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>                        
-                      </tr>
-                      <tr class="table-danger">
-                       <th scope="row"><input type="checkbox">4</th>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>                        
-                       </tr>
-                       <tr class="table-danger">
-                                <th scope="row"><input type="checkbox">5</th>
-                                <td>@twitter</td>
-                                <td>@twitter</td>
-                                <td>@twitter</td>                        
-                            </tr>
-                              <tr class="table-danger">
-                                    <th scope="row"><input type="checkbox">6</th>
-                                    <td>@twitter</td>
-                                    <td>@twitter</td>
-                                    <td>@twitter</td>                        
-                                  </tr>
-                                  <tr class="table-danger">
-                                        <th scope="row"> <input type="checkbox">7</th>
-                                        <td>@twitter</td>
-                                        <td>@twitter</td>
-                                        <td>@twitter</td>                        
-                                      </tr>
-                                      <tr class="table-danger">
-                                        <th scope="row"> <input type="checkbox">7</th>
-                                        <td>@twitter</td>
-                                        <td>@twitter</td>
-                                        <td>@twitter</td>                        
-                                      </tr>
-                    </tbody>     
-                                           
-                  </table>
-                  <div id="bt">   
-                  <button type="button" class="btn btn-secondary">등록</button>
-                  <button type="button" class="btn btn-secondary">수정</button>
-                  <button type="button" class="btn btn-secondary">삭제</button>     
-                </div>    
-                </div>
-        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        
-        </body>
+<head></head>
+<div id="content">
+	<table id=tb class="table table-hover ">
+		<thead>
+			<tr class="table-dark">
+				<th scope="col" style="width: 80px;">N O</th>
+				<th scope="col" style="width: 150px;">요일</th>
+				<th scope="col" style="width: 150px;">제 목</th>
+				<th scope="col" style="width: 200px;">내 용</th>
+			</tr>
+		</thead>
+		<tbody id="tbody">
+		</tbody>
+
+	</table>
+	<div id="bt">
+		<button type="button" class="btn btn-secondary">등록</button>
+		<button type="button" class="btn btn-secondary">수정</button>
+		<button type="button" class="btn btn-secondary">삭제</button>
+	</div>
+</div>
+<script id="listsection" type ="text/x-handlebars-template">
+{{#each list}}
+<tr class="table-danger">
+<th scope="row"><input type="checkbox">{{no}}</th>
+<td>{{day}}</td><td>{{title}}</td> <td>{{contant}}</td></tr>
+{{/each}}
+
+</script>
+<script src="../node_modules/handlebars/dist/handlebars.min.js"></script>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="list.js"></script>
+
+
+
+</body>
 </html>

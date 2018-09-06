@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bitcamp.step.repository.DiaryRepository">
+
+  <resultMap type="diary" id="diaryMap">
+    <id column="DNO" property="no"/>
+    <result column="MNO" property="memberNo"/>
+    <result column="DDAY" property="day"/>
+    <result column="DTIT" property="title"/>
+    <result column="DCON" property="contant"/>
+  </resultMap>
+  
+  <select id="findByMemberNo"
+           parameterType="int"
+           resultMap="diaryMap">
+      select *
+      from ST_DIAR
+      where MNO=#{value}
+      order by DNO asc      
+    </select> 
+ 
+
+ </mapper>
+
+
+
+
+
